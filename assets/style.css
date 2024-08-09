@@ -43,6 +43,10 @@ h1 {
     display: flex;
     flex-direction: row;
     cursor:grab;
+    touch-action: none;
+    user-select: none;
+
+    
 }
 /* all input elements */
 input {
