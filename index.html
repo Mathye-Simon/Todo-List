@@ -9,14 +9,20 @@
 <body style="background-color: aliceblue;">
     <div class="container">
         <h1>
-            [name] welcome to your Todo List. 
+            Hi, [username] welcome to your Todo List. 
         </h1>
         <div class="addToDo">
             <input type="text" class="inputToDo" placeholder="e.g buy a dozen eggs">
-            <input type="button" id="addbtn" value="Add todo">
+            <input type="button" class="addBtn" value="Add todo">
         </div>
-        <div id="todos">
-            <p>Buy a dozen eggs</p><input type="button" value="Remove">
+        <div class="todoListContainer">
+            <div class="todo">
+                <input type="radio"><p class="list" draggable="true">Buy a dozen eggs</p>
+            </div>
+            <div class="todo" draggable="true">
+                <input type="radio"><p class="list">Solve line 23 in dom.js</p>
+            </div>
+            <div id="drop-zone">Drag item here to remove</div>
         </div>
     </div>
 

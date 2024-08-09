@@ -17,13 +17,58 @@ h1 {
     width: 90vw;
     margin: auto;
 }
-
-input {
-    padding: 5px;
-    margin: 0px;
-}
+/* input section */
 .addToDo {
     display: flex;
     flex-direction: row; 
     gap: 4px;
+}
+.addBtn {
+    border-radius: 10px;
+    background-color: greenyellow;
+    border: 0px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+.addBtn:hover {
+    box-shadow:  0 0 0 2px greenyellow;
+}
+/* added todos */
+.todoListContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.todo {
+    display: flex;
+    flex-direction: row;
+    cursor:grab;
+}
+/* all input elements */
+input {
+    padding: 5px;
+    margin: 0px;
+}
+.list {
+    font-size: 13px;
+    margin: 0px;
+    padding: 3px;
+    /* outline: rgb(143, 143, 15) 1px solid; */
+}
+.removeBtn {
+    border-radius: 10px;
+    background-color: rgb(255, 47, 47);
+    border: 0px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+
+}
+#drop-zone {
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px dashed #ccc;
+    text-align: center;
+}
+.removeBtn:hover {
+    box-shadow:  0 0 0 1px rgb(255, 47, 47);
 }
