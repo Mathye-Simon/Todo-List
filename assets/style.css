@@ -59,13 +59,16 @@ input {
     padding: 3px;
     /* outline: rgb(143, 143, 15) 1px solid; */
 }
-.removeBtn {
-    border-radius: 10px;
-    background-color: rgb(255, 47, 47);
-    border: 0px;
-    cursor: pointer;
-    transition: box-shadow 0.3s ease;
+#removeToDo {
+   background-color: red;
+   border-radius: 8px;
+   border: 0px;
+   cursor:pointer;
+   transition: box-shadow 0.3s ease;
 
+}
+#removeToDo:hover {
+    box-shadow: 0 0 0 2px red
 }
 #drop-zone {
     margin-top: 20px;
