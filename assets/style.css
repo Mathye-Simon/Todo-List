@@ -53,13 +53,16 @@ input {
     padding: 5px;
     margin: 0px;
 }
+.inputToDo {
+    width: 80vw;
+}
 .list {
     font-size: 13px;
     margin: 0px;
     padding: 3px;
     /* outline: rgb(143, 143, 15) 1px solid; */
 }
-#removeToDo {
+#removeBtn {
    background-color: red;
    border-radius: 8px;
    border: 0px;
@@ -67,7 +70,7 @@ input {
    transition: box-shadow 0.3s ease;
 
 }
-#removeToDo:hover {
+#removeBtn:hover {
     box-shadow: 0 0 0 2px red
 }
 #drop-zone {
