@@ -10,6 +10,13 @@ h1 {
     margin:10px;
     text-align: justify;
 }
+li {
+    list-style-type: none;
+}
+.todoDiv {
+    display: flex;
+    flex-direction: row;
+}
 .container {
     display: flex;
     flex-direction: column;
