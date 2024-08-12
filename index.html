@@ -7,10 +7,22 @@
     <title>Todo List</title>
 </head>
 <body style="background-color: aliceblue;">
+    
     <div class="container">
-        <h1>
-            Hi, [username] welcome to your Todo List. 
+        <h1 id="greetUser">
+            Hi, welcome to your Todo List!
         </h1>
+        <!-- right after it loads so that it can be manipulated -->
+        <script>
+            let userName = prompt('Hi, please input your name: ')
+            let greetUser = document.querySelector('#greetUser')
+            if (greetUser == ''){
+                greetUser.textContent = 'Hi, welcome to your Todo List!'
+            } else {
+                greetUser.textContent = `Hi ${userName}, welcome to your Todo List!`
+            }
+        </script>
+
         <div class="addToDo">
             <input type="text" class="inputToDo" id="todoContent" placeholder="e.g buy a dozen eggs">
             <input type="button" class="addBtn"id="addBtn"  value="Add todo">
