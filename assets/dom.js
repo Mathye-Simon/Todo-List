@@ -31,12 +31,13 @@ function handleEvent (event) {
 
             // set class for styling
             todoDiv.setAttribute('class',`todoDiv`)
+            todoCheckbox.setAttribute('class', 'todoCheckbox')
             
 
             // structuring elements
             todoDiv.append(todoCheckbox,list)
             todoListContainer.append(todoDiv)}
-            
+
             // clear input after adding todo
             todoInput.value = '';
             

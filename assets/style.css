@@ -46,15 +46,6 @@ li {
     flex-direction: column;
     gap: 10px;
 }
-.todo {
-    display: flex;
-    flex-direction: row;
-    cursor:grab;
-    touch-action: none;
-    user-select: none;
-
-    
-}
 /* all input elements */
 input {
     padding: 5px;
@@ -89,3 +80,41 @@ input {
 .removeBtn:hover {
     box-shadow:  0 0 0 1px rgb(255, 47, 47);
 }
+
+/* large screens */
+@media (min-width: 1024px) {
+    .container {
+        width: 900px;
+        margin: auto;
+        margin-top: 100px;
+        gap: 30px;
+        background-color: rgb(214, 241, 159);
+        padding: 15px;
+        border-radius: 10px;
+    }
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 40px;
+        margin: 0px;
+    }
+
+    .addToDo {
+        height: 40px;
+    }
+    input {
+        font-size: 25px;
+    }
+    .todoCheckbox 
+        ,li {
+        font-size: 30px;
+    }
+    .todoCheckbox {
+        transform: scale(1.5);
+        margin-right: 7px;
+        margin-left: 0px;
+        
+    }
+    .todoListContainer {
+        gap: 20px;
+    }
+    }
