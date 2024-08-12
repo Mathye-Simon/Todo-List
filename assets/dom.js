@@ -15,6 +15,7 @@ function handleEvent (event) {
         // error handling
         if (todoText == '') {
             console.log('error: no input provided');
+            return;
         } else {
         // new elements each click
             const todoCheckbox = document.createElement('input')
@@ -29,15 +30,24 @@ function handleEvent (event) {
 
             // set class for styling
             todoDiv.setAttribute('class',`todoDiv`)
-
+            
 
             // structuring elements
             todoDiv.append(todoCheckbox,list)
             todoListContainer.append(todoDiv)}
+        
+            
     }
 }
 addBtn.addEventListener('click',handleEvent)
 todoInput.addEventListener('keydown', handleEvent)
+
+// removing a todo and its container
+removeBtn.addEventListener('click', () => {
+    const checkedItems = document.querySelectorAll('input[type="checkbox"]:checked');
+    checkedItems.forEach(function (item) {item.parentElement.remove()});
+});
+
 
 
 
