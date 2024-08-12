@@ -7,6 +7,7 @@ const todoInput = document.querySelector('#todoContent')
 
 // to make unique todos
 todoNumber = 0;
+uniqueID = todoNumber += 1;
 // add todo with a checkbox based on an event
 function handleEvent (event) {
     if (event.type == 'click' || event.type == 'keydown' && event.key == 'Enter') {
@@ -24,9 +25,9 @@ function handleEvent (event) {
             const list = document.createElement('li')
             list.textContent = todoText
             // set id for each element added
-            list.setAttribute('id',`todo ${todoNumber+=1}`)
-            todoDiv.setAttribute('id',`todoDiv ${todoNumber}`)
-            todoCheckbox.setAttribute('id',`todoCheckbox ${todoNumber}`)
+            list.setAttribute('id',`todo ${uniqueID}`)
+            todoDiv.setAttribute('id',`todoDiv ${uniqueID}`)
+            todoCheckbox.setAttribute('id',`todoCheckbox ${uniqueID}`)
 
             // set class for styling
             todoDiv.setAttribute('class',`todoDiv`)
@@ -35,7 +36,9 @@ function handleEvent (event) {
             // structuring elements
             todoDiv.append(todoCheckbox,list)
             todoListContainer.append(todoDiv)}
-        
+            
+            // clear input after adding todo
+            todoInput.value = '';
             
     }
 }
