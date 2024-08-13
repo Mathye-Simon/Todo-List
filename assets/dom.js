@@ -5,8 +5,8 @@ const todoListContainer = document.querySelector('#todoListContainer')
 const todoInput = document.querySelector('#todoContent')
 
 // to make unique todos
-todoNumber = 0;
-uniqueID = todoNumber += 1;
+let uniqueID = 0;
+
 // add todo with a checkbox based on an event
 function handleEvent (event) {
     if (event.type == 'click' || event.type == 'keydown' && event.key == 'Enter') {
@@ -18,6 +18,9 @@ function handleEvent (event) {
             return;
         } else {
         // new elements each click
+            
+            
+            uniqueID+=1
             const todoCheckbox = document.createElement('input')
             todoCheckbox.setAttribute('type','checkbox')
             const todoDiv = document.createElement('div')
