@@ -4,7 +4,6 @@ const removeBtn = document.querySelector("#removeBtn")
 const todoListContainer = document.querySelector('#todoListContainer')
 const todoInput = document.querySelector('#todoContent')
 
-
 // to make unique todos
 todoNumber = 0;
 uniqueID = todoNumber += 1;
@@ -52,6 +51,17 @@ removeBtn.addEventListener('click', () => {
     checkedItems.forEach(function (item) {item.parentElement.remove()});
 });
 
+
+
+// for slide style
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('#container')
+    
+    // Add the 'visible' class after a small delay to ensure the page is fully loaded
+    setTimeout(() => {
+    container.classList.add('visible');
+    }, 100); // Small delay to ensure the page is fully loaded
+});
 
 
 
